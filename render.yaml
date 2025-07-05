@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: camera-store-bot
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: EMAIL_TO
+        sync: false
+      - key: PORT
+        value: 3000
+    autoDeploy: true
